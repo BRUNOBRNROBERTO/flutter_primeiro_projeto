@@ -28,8 +28,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter primeiro projeto',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        // primarySwatch: Colors.blue),
+        //useMaterial3: true,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+        ),
+
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.amber,
+          foregroundColor: Colors.black,
+          surfaceTintColor: Colors.transparent,
+        ),
       ),
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,

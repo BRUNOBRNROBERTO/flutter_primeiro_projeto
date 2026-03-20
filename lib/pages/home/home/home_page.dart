@@ -88,7 +88,31 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(),
+      //body: Theme(
+      //data: ThemeData(primaryColor: Colors.red),
+      //child: Center(
+      //child: Column(
+      //mainAxisAlignment: MainAxisAlignment.center,
+      //children: [
+      //ElevatedButton(onPressed: () {}, child: Text('Botão X')),
+      //Container(
+      //height: 100,
+      // width: 100,
+      //color: Theme.of(context).colorScheme.primary,
+      //child: Center(
+      //child: Text(
+      //'Botao X',
+      //style: TextStyle(
+      //color: Theme.of(context).colorScheme.onPrimary,
     );
+    // ),
+    //),
+    //),
+    //],
+    //),
+    //),
+    //),
+    //  body: Container(),
+    //);
   }
 }
