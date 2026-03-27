@@ -9,6 +9,8 @@ enum PopupMenuPages {
   scrolls_single_child,
   scrolls_list_view,
   dialogs,
+  snackbars,
+  forms,
 }
 
 class HomePage extends StatelessWidget {
@@ -47,6 +49,12 @@ class HomePage extends StatelessWidget {
                 case PopupMenuPages.dialogs:
                   Navigator.of(context).pushNamed('/dialogs');
                   break;
+                case PopupMenuPages.snackbars:
+                  Navigator.of(context).pushNamed('/snackbars');
+                  break;
+                case PopupMenuPages.forms:
+                  Navigator.of(context).pushNamed('/forms');
+                  break;
               }
             },
             itemBuilder: (BuildContext context) {
@@ -83,10 +91,49 @@ class HomePage extends StatelessWidget {
                   value: PopupMenuPages.dialogs,
                   child: Text('Dialogs'),
                 ),
+                PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.snackbars,
+                  child: Text('Snacksbars'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                  value: PopupMenuPages.forms,
+                  child: Text('Forms'),
+                ),
               ];
             },
           ),
         ],
+      ),
+      body: Theme(
+        data: Theme.of(context).copyWith(primaryColor: Colors.red),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(onPressed: () {}, child: Text('Botão X')),
+              ContainerX(),
+              Container(
+                height: 100,
+                width: 100,
+                color: Theme.of(context).primaryColor,
+              ),
+              Builder(
+                builder: (contextInterno) {
+                  return Container(
+                    height: 100,
+                    width: 100,
+                    color: Theme.of(contextInterno).primaryColor,
+                  );
+                },
+              ),
+              TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(textStyle: TextStyle(fontSize: 30)),
+                child: Text('TESTE'),
+              ),
+            ],
+          ),
+        ),
       ),
       //body: Theme(
       //data: ThemeData(primaryColor: Colors.red),
@@ -114,5 +161,18 @@ class HomePage extends StatelessWidget {
     //),
     //  body: Container(),
     //);
+  }
+}
+
+class ContainerX extends StatelessWidget {
+  const ContainerX({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      width: 100,
+      color: Theme.of(context).primaryColor,
+    );
   }
 }
