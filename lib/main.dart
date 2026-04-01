@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 //import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiro_projeto/pages/botoes_rotacao_texto/botoes_rotacao_texto_page.dart';
+import 'package:flutter_primeiro_projeto/pages/cidades/cidades_page.dart';
 import 'package:flutter_primeiro_projeto/pages/container/container_page.dart';
 import 'package:flutter_primeiro_projeto/pages/dialogs/dialos_pages.dart';
 import 'package:flutter_primeiro_projeto/pages/forms/forms_page.dart';
@@ -12,6 +13,7 @@ import 'package:flutter_primeiro_projeto/pages/rows_colmns/rows_column_page.dart
 import 'package:flutter_primeiro_projeto/pages/scrolls/listview_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/singlechildscrollview_page.dart';
 import 'package:flutter_primeiro_projeto/pages/snackbar/snackbar_page.dart';
+import 'package:flutter_primeiro_projeto/pages/stack/stack_page.dart';
 
 void main() {
   runApp(
@@ -66,6 +68,8 @@ class MyApp extends StatelessWidget {
         '/dialogs': (_) => DialosPages(),
         '/snackbars': (_) => SnackbarPage(),
         '/forms': (_) => FormsPage(),
+        '/cidades': (_) => CidadesPage(),
+        '/stack': (_) => StackPage(),
       },
     );
   }
